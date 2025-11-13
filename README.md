@@ -1,93 +1,93 @@
 # Zsh Rapid Install
 
-一键安装 Zsh + Oh My Zsh + Powerlevel10k 主题和常用插件。
+One-click installation of Zsh + Oh My Zsh + Powerlevel10k theme and popular plugins.
 
-## 支持的系统
+## Supported Systems
 
 - Ubuntu / Debian
 - macOS
 
-## 功能特性
+## Features
 
-- 自动检测操作系统并使用对应的包管理器
-- 安装 Zsh 和 Oh My Zsh
-- 安装三个最佳插件：
-  - `zsh-autosuggestions` - 命令自动建议
-  - `zsh-syntax-highlighting` - 语法高亮
-  - `zsh-completions` - 额外的命令补全
-- 安装并配置 Powerlevel10k 主题
-- 自动备份配置文件
-- 完整的错误处理
+- Automatic OS detection and appropriate package manager usage
+- Install Zsh and Oh My Zsh
+- Install three best plugins:
+  - `zsh-autosuggestions` - Command auto-suggestions
+  - `zsh-syntax-highlighting` - Syntax highlighting
+  - `zsh-completions` - Additional command completions
+- Install and configure Powerlevel10k theme
+- Automatic configuration file backup
+- Complete error handling
 
-## 快速开始
+## Quick Start
 
-### 方法 1: 一键执行（推荐）
+### Method 1: One-Click Installation (Recommended)
 
 ```bash
 bash <(curl -fsSL https://raw.githubusercontent.com/yourusername/zsh_rapid_install/main/install.sh)
 ```
 
-### 方法 2: 克隆后执行
+### Method 2: Clone and Execute
 
 ```bash
-# 克隆仓库
+# Clone the repository
 git clone https://github.com/yourusername/zsh_rapid_install.git
 cd zsh_rapid_install
 
-# 添加执行权限
+# Add execute permissions
 chmod +x install.sh
 
-# 运行安装脚本
+# Run the installation script
 ./install.sh
 ```
 
-### 方法 3: 手动执行命令
+### Method 3: Manual Command Execution
 
-如果你想手动执行命令，可以参考 `zsh rapid install.txt` 文件中的命令。
+If you prefer to execute commands manually, refer to the commands in `zsh rapid install.txt`.
 
-## 安装后
+## Post-Installation
 
-1. 重启终端或运行 `exec zsh`
-2. Powerlevel10k 配置向导会自动启动
-3. 按照提示自定义你的命令行样式
+1. Restart your terminal or run `exec zsh`
+2. The Powerlevel10k configuration wizard will start automatically
+3. Follow the prompts to customize your command-line style
 
-## 字体推荐
+## Recommended Font
 
-为了获得最佳显示效果，建议安装 Meslo Nerd Font：
+For the best visual experience, install Meslo Nerd Font:
 
-[下载 Meslo Nerd Font](https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k)
+[Download Meslo Nerd Font](https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k)
 
-## 备份文件
+## Backup Files
 
-脚本会在修改配置前自动创建备份：
+The script automatically creates backups before modifying configurations:
 - `.zshrc.backup.YYYYMMDD_HHMMSS`
 
-## 故障排除
+## Troubleshooting
 
-### macOS 上 Homebrew 未安装
+### Homebrew Not Installed on macOS
 
-脚本会自动检测并安装 Homebrew。
+The script will automatically detect and install Homebrew.
 
-### 权限问题
+### Permission Issues
 
-如果遇到权限问题，确保以正确的用户身份运行脚本（不要使用 root）。
+If you encounter permission issues, ensure you run the script with the correct user identity (do not use root).
 
-### 插件已存在
+### Plugins Already Exist
 
-脚本会检测已安装的组件并跳过，不会重复安装。
+The script detects already installed components and skips them to avoid duplicate installations.
 
-## 卸载
+## Uninstallation
 
-如果需要卸载，可以运行：
+If you need to uninstall, run:
 
 ```bash
-# 恢复备份的配置
+# Restore backup configuration
 cp ~/.zshrc.backup.YYYYMMDD_HHMMSS ~/.zshrc
 
-# 删除 Oh My Zsh
+# Remove Oh My Zsh
 rm -rf ~/.oh-my-zsh
 
-# 恢复默认 shell (bash)
+# Restore default shell (bash)
 chsh -s /bin/bash
 ```
 
